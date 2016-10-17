@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
@@ -55,7 +54,7 @@ namespace kursov
             {
                 Count.Text = (int.Parse(Count.Text) - 1).ToString();
                 label9.Text = (int.Parse(Count.Text) * Price).ToString() + " руб";
-                label12.Text =(int.Parse(Count.Text) * Price /  Math.Round(CursDol, 2)).ToString() + "$";
+                label12.Text = (int.Parse(Count.Text) * Price / Math.Round(CursDol, 2)).ToString() + "$";
             }
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,14 +67,21 @@ namespace kursov
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || Count.Text == "0")
+            {
+                MessageBox.Show("Необходимо заполнить все поля!");
+            }
+            else
+            {
+
+            }
         }
         private static double GET(string Url)
         {
             System.Net.WebRequest req = System.Net.WebRequest.Create(Url);
             System.Net.WebResponse resp = req.GetResponse();
-            System.IO.Stream stream = resp.GetResponseStream();
-            System.IO.StreamReader sr = new System.IO.StreamReader(stream);
+            Stream stream = resp.GetResponseStream();
+            StreamReader sr = new System.IO.StreamReader(stream);
             string xmlString = sr.ReadToEnd();
             XmlDocument xml = new XmlDocument();
             xml.LoadXml(xmlString);
@@ -83,7 +89,7 @@ namespace kursov
             nsmgr.AddNamespace("ecb", "http://www.ecb.int/vocabulary/2002-08-01/eurofxref");
             nsmgr.AddNamespace("gesmes", "http://www.gesmes.org/xml/2002-08-01");
             XmlNode currencyNode = xml.SelectSingleNode("descendant::ecb:Cube[@currency='RUB']", nsmgr);
-            string rate = currencyNode.Attributes.GetNamedItem("rate").Value.Trim().Replace(".",",");
+            string rate = currencyNode.Attributes.GetNamedItem("rate").Value.Trim().Replace(".", ",");
             float drate = float.Parse(rate);
             sr.Close();
             return drate;
