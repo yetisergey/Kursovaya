@@ -12,3 +12,16 @@ C:\Users\Sergey\Desktop\kursov\kursov\obj\Debug\kursov.Properties.Resources.reso
 C:\Users\Sergey\Desktop\kursov\kursov\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\Sergey\Desktop\kursov\kursov\obj\Debug\kursov.exe
 C:\Users\Sergey\Desktop\kursov\kursov\obj\Debug\kursov.pdb
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\bin\Debug\kursov.exe.config
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\kursov.exe
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\kursov.pdb
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\bin\Debug\kursov.exe
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\bin\Debug\kursov.pdb
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\bin\Debug\Json.dll
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\bin\Debug\Json.pdb
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\kursov.BuyTovar.resources
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\kursov.BuyYsl.resources
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\kursov.Form1.resources
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\kursov.Properties.Resources.resources
+C:\Users\Серёжка\Desktop\Github\Kursovaya\kursov\kursov\obj\Debug\Client.csproj.GenerateResource.Cache
