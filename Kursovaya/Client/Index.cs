@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class Form1 : Form
+    public partial class Index : Form
     {
-        public Form1()
+        public Index()
         {
             InitializeComponent();
         }
@@ -36,19 +36,19 @@ namespace Client
 
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BuyYsl BuyForm = new BuyYsl(linkLabel4.Text,30000);
+            BuyTovar BuyForm = new BuyTovar(linkLabel4.Text);
             BuyForm.Show();
         }
 
         private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BuyYsl BuyForm = new BuyYsl(linkLabel5.Text,40000);
+            BuyTovar BuyForm = new BuyTovar(linkLabel5.Text);
             BuyForm.Show();
         }
 
         private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BuyYsl BuyForm = new BuyYsl(linkLabel6.Text,10000);
+            BuyTovar BuyForm = new BuyTovar(linkLabel6.Text);
             BuyForm.Show();
         }
     }

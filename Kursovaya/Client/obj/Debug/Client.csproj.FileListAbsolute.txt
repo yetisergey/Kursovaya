@@ -13,8 +13,8 @@ C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\bin\Debug\Json.p
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.BuyTovar.resources
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.BuyYsl.resources
-C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.Form1.resources
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.csproj.GenerateResource.Cache
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.exe
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.pdb
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Client\obj\Debug\Client.Index.resources

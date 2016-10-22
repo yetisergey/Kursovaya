@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class Form1
+    partial class Index
     {
         /// <summary>
         /// Required designer variable.
@@ -81,12 +81,12 @@
             // 
             this.linklabel1.AutoSize = true;
             this.linklabel1.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linklabel1.Location = new System.Drawing.Point(94, 215);
+            this.linklabel1.Location = new System.Drawing.Point(69, 215);
             this.linklabel1.Name = "linklabel1";
-            this.linklabel1.Size = new System.Drawing.Size(57, 24);
+            this.linklabel1.Size = new System.Drawing.Size(113, 24);
             this.linklabel1.TabIndex = 13;
             this.linklabel1.TabStop = true;
-            this.linklabel1.Text = "Бетон";
+            this.linklabel1.Text = "Железобетон";
             this.linklabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklabel1_LinkClicked);
             // 
             // linkLabel2
@@ -134,12 +134,12 @@
             // 
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.Location = new System.Drawing.Point(12, 443);
+            this.linkLabel4.Location = new System.Drawing.Point(50, 443);
             this.linkLabel4.Name = "linkLabel4";
-            this.linkLabel4.Size = new System.Drawing.Size(218, 24);
+            this.linkLabel4.Size = new System.Drawing.Size(155, 24);
             this.linkLabel4.TabIndex = 18;
             this.linkLabel4.TabStop = true;
-            this.linkLabel4.Text = "Аренда Автобетононасоса";
+            this.linkLabel4.Text = "Силикатный бетон";
             this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_LinkClicked);
             // 
             // pictureBox5
@@ -154,12 +154,12 @@
             // 
             this.linkLabel5.AutoSize = true;
             this.linkLabel5.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel5.Location = new System.Drawing.Point(278, 443);
+            this.linkLabel5.Location = new System.Drawing.Point(261, 443);
             this.linkLabel5.Name = "linkLabel5";
-            this.linkLabel5.Size = new System.Drawing.Size(177, 24);
+            this.linkLabel5.Size = new System.Drawing.Size(203, 24);
             this.linkLabel5.TabIndex = 20;
             this.linkLabel5.TabStop = true;
-            this.linkLabel5.Text = "Аренда Цементовоза";
+            this.linkLabel5.Text = "Гидротехнический бетон";
             this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_LinkClicked);
             // 
             // pictureBox6
@@ -174,15 +174,15 @@
             // 
             this.linkLabel6.AutoSize = true;
             this.linkLabel6.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel6.Location = new System.Drawing.Point(500, 443);
+            this.linkLabel6.Location = new System.Drawing.Point(519, 443);
             this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(156, 24);
+            this.linkLabel6.Size = new System.Drawing.Size(128, 24);
             this.linkLabel6.TabIndex = 22;
             this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Аренда Автокрана";
+            this.linkLabel6.Text = "Перлитобетон ";
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
-            // Form1
+            // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +200,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "Index";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

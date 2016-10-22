@@ -1,15 +1,15 @@
 ﻿using Data;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
-
 
 namespace Client
 {
     public partial class BuyTovar : Form
     {
-        private int Idtovar;
+        private Product Glpr;
         private int Price;
         private double CursDol;
         class HelperSelected
@@ -23,35 +23,103 @@ namespace Client
             InitializeComponent();
             label1.Text = tempname;
             CursDol = GET("http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
-            if (tempname == "Бетон")
+            listBox1.DisplayMember = "Name";
+            //listBox1.ValueMember = "price";
+            if (tempname == "Железобетон")
             {
-                listBox1.DisplayMember = "name";
-                listBox1.ValueMember = "price";
-                listBox1.Items.Add(new HelperSelected { id=1, name = "2 вид 200", price = 200 });
-                listBox1.Items.Add(new HelperSelected { id=2, name = "1 вид 100", price = 100 });
-                listBox1.SelectedIndex = 0;
+                using (BaseContext db = new BaseContext())
+                {
+                    foreach (Product u
+                        in db.Products
+                        .Where(e => e.NameGroup == Namegroup.IronBeton)
+                        .ToList())
+                    {
+                        listBox1.Items.Add(u);
+                    };
+                    listBox1.SelectedIndex = 0;
+                };
             }
+
             if (tempname == "Керамзитобетон")
             {
-                listBox1.DisplayMember = "name";
-                listBox1.ValueMember = "price";
-                listBox1.Items.Add(new HelperSelected { id = 1, name = "user1", price = 100 });
-                listBox1.SelectedIndex = 0;
+                using (BaseContext db = new BaseContext())
+                {
+                    foreach (Product u in db.Products
+                        .Where(e => e.NameGroup == Namegroup.KeramzBeton)
+                        .ToList())
+                    {
+                        listBox1.Items.Add(u);
+                    };
+                    listBox1.SelectedIndex = 0;
+                };
             }
+
             if (tempname == "Асфальтобетон")
             {
-                listBox1.DisplayMember = "name";
-                listBox1.ValueMember = "price";
-                listBox1.Items.Add(new HelperSelected { id = 1, name = "user1", price = 100 });
-                listBox1.SelectedIndex = 0;
+                using (BaseContext db = new BaseContext())
+                {
+                    foreach (Product u in db.Products
+                        .Where(e => e.NameGroup == Namegroup.AsphaltBeton)
+                        .ToList())
+                    {
+                        listBox1.Items.Add(u);
+                    };
+                    listBox1.SelectedIndex = 0;
+                };
+            }
+
+            if (tempname == "Силикатный бетон")
+            {
+                using (BaseContext db = new BaseContext())
+                {
+                    foreach (Product u in db.Products
+                        .Where(e => e.NameGroup == Namegroup.SilicBeton)
+                        .ToList())
+                    {
+                        listBox1.Items.Add(u);
+                    };
+                    listBox1.SelectedIndex = 0;
+                };
+            }
+
+            if (tempname == "Гидротехнический бетон")
+            {
+
+                using (BaseContext db = new BaseContext())
+                {
+                    foreach (Product u
+                        in db.Products
+                        .Where(e => e.NameGroup == Namegroup.HidroBeton)
+                        .ToList())
+                    {
+                        listBox1.Items.Add(u);
+                    };
+                    listBox1.SelectedIndex = 0;
+                };
+            }
+
+            if (tempname == "Перлитобетон")
+            {
+                using (BaseContext db = new BaseContext())
+                {
+                    foreach (Product u in db.Products
+                        .Where(e => e.NameGroup == Namegroup.PerlitBeton)
+                        .ToList())
+                    {
+                        listBox1.Items.Add(u);
+                    };
+                    listBox1.SelectedIndex = 0;
+                };
             }
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Count.Text = (int.Parse(Count.Text) + 1).ToString();
             label9.Text = (int.Parse(Count.Text) * Price).ToString() + " руб";
             label12.Text = (int.Parse(Count.Text) * Price / CursDol).ToString() + "$";
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             if (int.Parse(Count.Text) > 1)
@@ -61,15 +129,17 @@ namespace Client
                 label12.Text = (int.Parse(Count.Text) * Price / Math.Round(CursDol, 2)).ToString() + "$";
             }
         }
+
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            HelperSelected temp = (HelperSelected)listBox1.SelectedItem;
+            Product temp = (Product)listBox1.SelectedItem;
             Count.Text = "0";
             label9.Text = "0";
             label12.Text = "0";
-            Idtovar = temp.id;
-            Price = temp.price;
+            Glpr = temp;
+            Price = temp.Price;
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || Count.Text == "0")
@@ -78,23 +148,24 @@ namespace Client
             }
             else
             {
-
-                Purchase obj = new Purchase();
-                obj.Fio = textBox1.Text+" "+textBox5.Text+" "+textBox4.Text;
-                obj.PasportId = textBox2.Text;
-                obj.Telephone = textBox3.Text;
-                obj.Counttovar = int.Parse(Count.Text);
-                obj.Idtovar = Idtovar.ToString();
-                obj.Idyslugi = null;
-                obj.Price = Price;
-                using (PurchaseContext db = new PurchaseContext())
+                using (BaseContext db = new BaseContext())
                 {
+                    Purchase obj = new Purchase();
+                    obj.Fio = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+                    obj.PasportId = textBox4.Text;
+                    obj.Telephone = textBox5.Text;
+                    obj.Counttovar = int.Parse(Count.Text);
+                    obj.Date = DateTime.Now;
+                    obj.IdProduct = Glpr.IdProduct;
+                    obj.Price =int.Parse(label9.Text);
                     db.Purchases.Add(obj);
                     db.SaveChanges();
                     MessageBox.Show("Заказ успешно совершён!");
+                    Close();
                 }
             }
         }
+
         private static double GET(string Url)
         {
             System.Net.WebRequest req = System.Net.WebRequest.Create(Url);
