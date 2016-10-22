@@ -28,8 +28,8 @@ namespace Data
                     db.Products.Add(new Product { Name = "Горячие и теплые смеси", NameGroup = Namegroup.AsphaltBeton, Price = 10000 });
                     db.Products.Add(new Product { Name = "Холодный асфальтобетон", NameGroup = Namegroup.AsphaltBeton, Price = 4500 });
                     //керамзитобетон
-                    db.Products.Add(new Product { Name = "Конструктивный", NameGroup = Namegroup.AsphaltBeton, Price = 2505 });
-                    db.Products.Add(new Product { Name = "Теплоизоляционный", NameGroup = Namegroup.AsphaltBeton, Price = 3000 });
+                    db.Products.Add(new Product { Name = "Конструктивный", NameGroup = Namegroup.KeramzBeton, Price = 2505 });
+                    db.Products.Add(new Product { Name = "Теплоизоляционный", NameGroup = Namegroup.KeramzBeton, Price = 3000 });
                     db.Products.Add(new Product { Name = "теплоизоляционно-конструктивный", NameGroup = Namegroup.KeramzBeton, Price = 5600 });
                     //силикатный бетон
                     db.Products.Add(new Product { Name = "Тяжелый силикатный бетон", NameGroup = Namegroup.SilicBeton, Price = 3200 });

@@ -176,10 +176,10 @@
             this.linkLabel6.Font = new System.Drawing.Font("Felix Titling", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel6.Location = new System.Drawing.Point(519, 443);
             this.linkLabel6.Name = "linkLabel6";
-            this.linkLabel6.Size = new System.Drawing.Size(128, 24);
+            this.linkLabel6.Size = new System.Drawing.Size(122, 24);
             this.linkLabel6.TabIndex = 22;
             this.linkLabel6.TabStop = true;
-            this.linkLabel6.Text = "Перлитобетон ";
+            this.linkLabel6.Text = "Перлитобетон";
             this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
             // 
             // Index

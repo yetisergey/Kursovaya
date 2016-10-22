@@ -117,7 +117,7 @@ namespace Client
         {
             Count.Text = (int.Parse(Count.Text) + 1).ToString();
             label9.Text = (int.Parse(Count.Text) * Price).ToString() + " руб";
-            label12.Text = (int.Parse(Count.Text) * Price / CursDol).ToString() + "$";
+            label12.Text = (int.Parse(Count.Text) * Price / CursDol).ToString("0.000") + "$";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace Client
             {
                 Count.Text = (int.Parse(Count.Text) - 1).ToString();
                 label9.Text = (int.Parse(Count.Text) * Price).ToString() + " руб";
-                label12.Text = (int.Parse(Count.Text) * Price / Math.Round(CursDol, 2)).ToString() + "$";
+                label12.Text = (int.Parse(Count.Text) * Price / Math.Round(CursDol, 2)).ToString("0.000") + "$";
             }
         }
 
