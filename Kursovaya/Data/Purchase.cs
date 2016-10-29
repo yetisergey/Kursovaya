@@ -27,6 +27,7 @@ namespace Data
         {
             purch = new List<Purchase>();
         }
+        public int Count { get; set; }
     }
     public class Purchase
     {

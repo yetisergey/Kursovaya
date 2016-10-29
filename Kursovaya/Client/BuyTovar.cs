@@ -12,6 +12,7 @@ namespace Client
         private Product Glpr;
         private int Price;
         private double CursDol;
+        private int GlobPrice;
         class HelperSelected
         {
             public int id { get; set; }
@@ -117,6 +118,7 @@ namespace Client
         {
             Count.Text = (int.Parse(Count.Text) + 1).ToString();
             label9.Text = (int.Parse(Count.Text) * Price).ToString() + " руб";
+            GlobPrice = int.Parse(Count.Text) * Price;
             label12.Text = (int.Parse(Count.Text) * Price / CursDol).ToString("0.000") + "$";
         }
 
@@ -126,6 +128,7 @@ namespace Client
             {
                 Count.Text = (int.Parse(Count.Text) - 1).ToString();
                 label9.Text = (int.Parse(Count.Text) * Price).ToString() + " руб";
+                GlobPrice = int.Parse(Count.Text) * Price;
                 label12.Text = (int.Parse(Count.Text) * Price / Math.Round(CursDol, 2)).ToString("0.000") + "$";
             }
         }
@@ -150,18 +153,24 @@ namespace Client
             {
                 using (BaseContext db = new BaseContext())
                 {
-                    Purchase obj = new Purchase();
-                    obj.Fio = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
-                    obj.PasportId = textBox4.Text;
-                    obj.Telephone = textBox5.Text;
-                    obj.Counttovar = int.Parse(Count.Text);
-                    obj.Date = DateTime.Now;
-                    obj.IdProduct = Glpr.IdProduct;
-                    obj.Price =int.Parse(label9.Text);
-                    db.Purchases.Add(obj);
-                    db.SaveChanges();
-                    MessageBox.Show("Заказ успешно совершён!");
-                    Close();
+                    try
+                    {
+                        Purchase obj = new Purchase();
+                        obj.Fio = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
+                        obj.PasportId = textBox4.Text;
+                        obj.Telephone = textBox5.Text;
+                        obj.Counttovar = int.Parse(Count.Text);
+                        obj.Date = DateTime.Now;
+                        obj.IdProduct = Glpr.IdProduct;
+                        obj.Price = GlobPrice;
+                        db.Purchases.Add(obj);
+                        db.SaveChanges();
+                        MessageBox.Show("Заказ успешно совершён!");
+                        Close();
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }

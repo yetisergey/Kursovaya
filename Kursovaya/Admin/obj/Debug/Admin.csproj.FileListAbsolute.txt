@@ -1,0 +1,16 @@
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Admin.exe.config
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Admin.exe
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Admin.pdb
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.csprojResolveAssemblyReference.cache
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.Properties.Resources.resources
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.csproj.GenerateResource.Cache
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.exe
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.pdb
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.Form1.resources
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.Sales.resources
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Data.exe
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.dll
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Data.pdb
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.xml
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.SqlServer.xml
