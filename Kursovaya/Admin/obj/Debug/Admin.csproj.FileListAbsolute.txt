@@ -14,3 +14,4 @@ C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityF
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Data.pdb
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.xml
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.SalesAll.resources
