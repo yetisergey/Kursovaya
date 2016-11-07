@@ -68,5 +68,11 @@ namespace Admin
                 a.Show();
             }
         }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Users a = new Users();
+            a.Show();
+        }
     }
 }

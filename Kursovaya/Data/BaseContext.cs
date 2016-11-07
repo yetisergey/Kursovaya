@@ -13,8 +13,9 @@ namespace Data
             : base("DbConnection")
         {          
         }
+        public DbSet<User> UsersAdmin { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
-
+        
     }
 }

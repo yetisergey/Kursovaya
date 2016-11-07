@@ -44,13 +44,13 @@ namespace Data
                     db.Products.Add(new Product { Name = "Мелкозернистый циркониевый", NameGroup = Namegroup.PerlitBeton, Price = 5000 });
                     db.Products.Add(new Product { Name = "Жаростойкий шамотный", NameGroup = Namegroup.PerlitBeton, Price = 4090 });
                     db.SaveChanges();
-
                     //покупки
                     Purchase pur1 = new Purchase { Fio = "Масленников Сергей Андреевич", PasportId = "12839011", Telephone = "8937510144", IdProduct = pr1.IdProduct, Price = 10000, Counttovar = 40, Date = DateTime.Now };
                     Purchase pur2 = new Purchase { Fio = "Бальзамов Александр Витальевич", PasportId = "1122221", Telephone = "89093280505", IdProduct = pr2.IdProduct, Price = 12000, Counttovar = 2, Date = DateTime.Now };
                     db.Purchases.Add(pur1);
                     db.Purchases.Add(pur2);
-
+                    //пользователи Admin
+                    db.UsersAdmin.Add(new User { Login = "sergey", Password = "yeti" });
                     db.SaveChanges();
                     Console.WriteLine("Изменения сохранены");
                 }

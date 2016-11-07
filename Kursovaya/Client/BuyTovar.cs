@@ -23,7 +23,7 @@ namespace Client
         {
             InitializeComponent();
             label1.Text = tempname;
-            ///CursDol = GET("http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
+            CursDol = GET("http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
             listBox1.DisplayMember = "Name";
             //listBox1.ValueMember = "price";
             if (tempname == "Железобетон")

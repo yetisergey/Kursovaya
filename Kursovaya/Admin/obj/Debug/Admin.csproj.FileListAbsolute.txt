@@ -15,3 +15,6 @@ C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\Data.pd
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.xml
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.SalesAll.resources
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.Auth.resources
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.UserRedaction.resources
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\Debug\Admin.Users.resources
