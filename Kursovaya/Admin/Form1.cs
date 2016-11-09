@@ -74,5 +74,12 @@ namespace Admin
             Users a = new Users();
             a.Show();
         }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            HintForm a = new HintForm();
+            a.Show();
+
+        }
     }
 }
