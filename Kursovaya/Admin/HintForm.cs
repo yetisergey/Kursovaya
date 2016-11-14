@@ -2,6 +2,9 @@
 using MathWorks.MATLAB.NET.Arrays;
 using hint;
 using System;
+using Data;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace Admin
 {
@@ -10,28 +13,60 @@ namespace Admin
         public HintForm()
         {
             InitializeComponent();
-
-
-            MWArray mas = null;
-            MWNumericArray arr1 = new int[] { 1, 2, 3, 4, 5, 6 };
-            mas = arr1;
-
-
-            MWArray mas2 = null;
-            MWNumericArray arr2 = new int[] { 10, 30, 50, 34,59, 45 };
-            mas2 = arr2;
-
-            MWArray result = null;
-            try
+            MLHint res = new MLHint();
+            List<HelperTable> table = new List<HelperTable>();
+            using (BaseContext db = new BaseContext())
             {
-                MLHint res = new MLHint();
-                result = res.hint(mas,mas2);
-                MessageBox.Show(result.ToString());
+                foreach (var io in db.Products)
+                {
+                    var list = db.Purchases.Where(p => p.IdProduct == io.IdProduct).ToList();
+                    var temparr = from i in list
+                                  group i by new { i.Date.Month, i.Date.Year } into grp
+                                  select new { Month = grp.Key, Count = grp.Sum(i => i.Counttovar) };
+
+                    int[] reslinq = temparr.ToList().OrderBy(u => u.Month.Month).OrderBy(u => u.Month.Year).Select(u => u.Count).ToArray();
+                    int[] tt1 = new int[reslinq.Count()];
+                    for (var it = 0; it < reslinq.Count(); it++) {
+                        tt1[it] = it;
+                    }
+                    MWArray mas = null;
+                    MWNumericArray arr1 = tt1;
+                    mas = arr1;
+
+                    MWArray mas2 = null;
+                    MWNumericArray arr2 = reslinq;
+                    mas2 = arr2;
+
+                    try
+                    {
+                        var tempres = res.hint(mas, mas2).ToString();
+                        if (tempres.Contains('-')==true)
+                        {
+                            table.Add(new HelperTable(io.Name, "Спрос будет падать."));
+                        }
+                        else {
+                            table.Add(new HelperTable(io.Name, tempres));
+                        }
+                        
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                    }
+                }
             }
-            catch (Exception e)
+            dataGridView1.DataSource = table;
+        }
+        private class HelperTable
+        {
+            public HelperTable(string nm, string hnt)
             {
-                MessageBox.Show(e.Message);
+                Name = nm;
+                Hint = hnt;
             }
+            public string Name { get; set; }
+            public string Hint { get; set; }
         }
     }
+
 }
