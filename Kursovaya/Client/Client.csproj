@@ -67,12 +67,6 @@
     <Compile Include="BuyTovar.Designer.cs">
       <DependentUpon>BuyTovar.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuyYsl.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BuyYsl.Designer.cs">
-      <DependentUpon>BuyYsl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,9 +77,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BuyTovar.resx">
       <DependentUpon>BuyTovar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuyYsl.resx">
-      <DependentUpon>BuyYsl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>

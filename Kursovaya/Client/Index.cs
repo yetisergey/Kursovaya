@@ -34,22 +34,5 @@ namespace Client
             BuyForm.Show();
         }
 
-        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            BuyTovar BuyForm = new BuyTovar(linkLabel4.Text);
-            BuyForm.Show();
-        }
-
-        private void linkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            BuyTovar BuyForm = new BuyTovar(linkLabel5.Text);
-            BuyForm.Show();
-        }
-
-        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            BuyTovar BuyForm = new BuyTovar(linkLabel6.Text);
-            BuyForm.Show();
-        }
     }
 }

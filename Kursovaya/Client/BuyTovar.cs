@@ -69,49 +69,7 @@ namespace Client
                 };
             }
 
-            if (tempname == "Силикатный бетон")
-            {
-                using (BaseContext db = new BaseContext())
-                {
-                    foreach (Product u in db.Products
-                        .Where(e => e.NameGroup == Namegroup.SilicBeton)
-                        .ToList())
-                    {
-                        listBox1.Items.Add(u);
-                    };
-                    listBox1.SelectedIndex = 0;
-                };
-            }
 
-            if (tempname == "Гидротехнический бетон")
-            {
-
-                using (BaseContext db = new BaseContext())
-                {
-                    foreach (Product u
-                        in db.Products
-                        .Where(e => e.NameGroup == Namegroup.HidroBeton)
-                        .ToList())
-                    {
-                        listBox1.Items.Add(u);
-                    };
-                    listBox1.SelectedIndex = 0;
-                };
-            }
-
-            if (tempname == "Перлитобетон")
-            {
-                using (BaseContext db = new BaseContext())
-                {
-                    foreach (Product u in db.Products
-                        .Where(e => e.NameGroup == Namegroup.PerlitBeton)
-                        .ToList())
-                    {
-                        listBox1.Items.Add(u);
-                    };
-                    listBox1.SelectedIndex = 0;
-                };
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -145,7 +103,7 @@ namespace Client
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || textBox5.Text == "" || Count.Text == "0")
+            if (textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || Count.Text == "0")
             {
                 MessageBox.Show("Необходимо заполнить все поля!");
             }
@@ -157,18 +115,28 @@ namespace Client
                     {
                         Purchase obj = new Purchase();
                         obj.Fio = textBox1.Text + " " + textBox2.Text + " " + textBox3.Text;
-                        obj.PasportId = textBox4.Text;
-                        obj.Telephone = textBox5.Text;
                         obj.Counttovar = int.Parse(Count.Text);
                         obj.Date = DateTime.Now;
                         obj.IdProduct = Glpr.IdProduct;
                         obj.Price = GlobPrice;
                         db.Purchases.Add(obj);
-                        db.SaveChanges();
-                        MessageBox.Show("Заказ успешно совершён!");
-                        Close();
+                        Product temp = new Product();
+                        temp = db.Products.Find(Glpr.IdProduct);
+                        if (temp.Count - int.Parse(Count.Text) > 0)
+                        {
+                            temp.Count = temp.Count - int.Parse(Count.Text);
+                            db.SaveChanges();
+                            MessageBox.Show("Заказ успешно совершён!");
+                            Close();
+                        }
+                        else {
+                            MessageBox.Show("Выбранного товара недостаточно на складе. Масимальное количество товара: " + temp.Count);
+                        }
+
+
                     }
-                    catch (Exception ex) {
+                    catch (Exception ex)
+                    {
                         MessageBox.Show(ex.Message);
                     }
                 }

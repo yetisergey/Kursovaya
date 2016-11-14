@@ -9,10 +9,7 @@ namespace Data
     {
         IronBeton = 0,
         AsphaltBeton = 1,
-        KeramzBeton = 2,
-        SilicBeton = 3,
-        HidroBeton = 4,
-        PerlitBeton = 5
+        KeramzBeton = 2
     }
     public class Product
     {
@@ -34,8 +31,6 @@ namespace Data
         [Key]
         public int Id { get; set; }
         public string Fio { get; set; }
-        public string PasportId { get; set; }
-        public string Telephone { get; set; }
         public int Price { get; set; }
         public int Counttovar { get; set; }
         public DateTime Date { get; set; }

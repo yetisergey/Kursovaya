@@ -13,14 +13,10 @@ namespace Admin
             using (BaseContext db = new BaseContext())
             {
                 dataGridView1.DataSource = db.Purchases.Select(u => new {
-                    //Id = u.Id.ToString(),
                     FIO = u.Fio.ToString(),
-                    PasportId = u.PasportId.ToString(),
-                    Telephone = u.Telephone.ToString(),
                     Price = u.Price.ToString(),
                     CountTovar = u.Counttovar.ToString(),
                     Date = u.Date,
-                    //.ToString("dd.MM.yyyy"),
                     Prod = u.prod.Name.ToString()
                 }).ToList();
             }
