@@ -12,13 +12,16 @@ namespace Admin
             InitializeComponent();
             using (BaseContext db = new BaseContext())
             {
-                dataGridView1.DataSource = db.Purchases.Select(u => new {
+                dataGridView1.DataSource = db.Purchases.Select(u => new
+                {
                     FIO = u.Fio.ToString(),
                     Price = u.Price.ToString(),
                     CountTovar = u.Counttovar.ToString(),
                     Date = u.Date,
                     Prod = u.prod.Name.ToString()
-                }).ToList();
+                })
+                .OrderBy(u => u.Date)
+                .ToList();
             }
         }
     }

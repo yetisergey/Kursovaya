@@ -41,8 +41,9 @@ namespace Data
                     //Имена пользователей
                     DateTime st = new DateTime(2016,1,1);
                     DateTime en = new DateTime(2017,1,1);
-                    for (var it = 0; it < 1000; it++)
+                    for (var it = 0; it < 100; it++)
                     {
+                        Console.WriteLine(it);
                         var tempid = rnd.Next(1, 12);
                         var tempcount = rnd.Next(25, 40);
                         db.Purchases.Add(new Purchase { Fio = fio[rnd.Next(0, 5)], IdProduct = tempid, Price = db.Products.Find(tempid).Price * tempcount, Counttovar = tempcount, Date =GetRandomDate(st,en) });
