@@ -1,0 +1,25 @@
+﻿html, body {
+    height: 90vh;
+    font-family: Helvetica Narrow, sans-serif;
+    font-style: italic;
+    margin: 10px;
+}
+
+.flex-container {
+    text-align: center;
+}
+
+a {
+    cursor: pointer;
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+}
+
+img {
+    cursor: pointer;
+}
+
+h1 {
+    margin-bottom: 10px;
+}

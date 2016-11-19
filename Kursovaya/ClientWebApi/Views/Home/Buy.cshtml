@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Buy</title>
+
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/app/BuyCss.css" />
+    <script src="~/Scripts/knockout-3.4.0.js"></script>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/app/buycustom.js"></script>
+</head>
+<body>
+    <h1>Оформление заказа</h1>
+    <h1 data-bind="text:MainVid"></h1>
+
+    <table align="center">
+        <tbody>
+            <tr>
+                <td>Фамилия</td>
+                <td><input type="text" data-bind="value:f" /></td>
+            </tr>
+            <tr>
+                <td>Имя</td>
+                <td><input type="text" data-bind="value:i" /></td>
+            </tr>
+            <tr>
+                <td>Отчество</td>
+                <td><input type="text" data-bind="value:o" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Выбор товара</h3>
+    <table id="changetable" align="center" style="margin-top:5px;width:460px" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Наименование</td>
+                <td>Цена</td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach:ListProducts">
+            <tr data-bind="attr:{id:IdProd}">
+                <td data-bind="text:Name"></td>
+                <td data-bind="text:Price"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table align="center" style="margin-top:15px;width:460px">
+        <tbody>
+            <tr>
+                <td>Количество товара</td>
+                <td>
+                    <div class="input-group spinner">
+                        <input type="text" class="form-control" id="spinnercount" value="0">
+                        <div class="input-group-btn-vertical">
+                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Цена в RUB</td>
+                <td data-bind="text:priceRUB"></td>
+            </tr>
+            <tr>
+                <td>Цена в USD</td>
+                <td data-bind="text:priceUSD"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table align="center" style="margin-top:15px;width:460px;margin-bottom:10px">
+        <tbody>
+            <tr>
+                <td></td>
+                <td><button class="btn btn-warning" id="cancele" style="margin-right:10px">Отмена</button><button id="buytovar" class="btn btn-primary">Заказать</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
+<div id="Modal_Returner_Success" class="modal fade" style="z-index: 100510;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="Modal_Returner_Success_modal_header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Уведомление</h4>
+            </div>
+            <div class="modal-body" style="height: 90px;overflow: auto;">
+                <p data-bind="text:actioncontroller"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal" id="breakbuy" onclick="window.close()">
+                    Закрыть
+                </button>
+                <button class="btn btn-primary" data-dismiss="modal" id="continuebuy">
+                    Продолжить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
