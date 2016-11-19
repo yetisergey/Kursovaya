@@ -10,6 +10,11 @@ tr {
     cursor: pointer;
 }
 
+td {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
 input {
     width: 350px;
 }

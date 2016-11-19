@@ -69,7 +69,7 @@ $(function () {
         ViewModel.MainVid("Железобетон");
     }
     if (array[array.length - 1] == "2") {
-        ViewModel.MainVid("Асфальтбетон");
+        ViewModel.MainVid("Асфальтобетон");
     }
     if (array[array.length - 1] == "3") {
         ViewModel.MainVid("Керамзитобетон");
@@ -79,7 +79,7 @@ $(function () {
         if (IdProd !== "0") {
             $('.spinner input').val(parseInt($('.spinner input').val(), 10) + 1);
             ViewModel.priceRUB(Number($('.spinner input').val(), 10)*Number(Price.toString(), 10));
-            ViewModel.priceUSD(parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10),10));
+            ViewModel.priceUSD(parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10),10)+" руб");
         }
     });
 
@@ -88,7 +88,7 @@ $(function () {
             if (parseInt($('.spinner input').val(), 10) - 1 > 0) {
                 $('.spinner input').val(parseInt($('.spinner input').val(), 10) - 1);
                 ViewModel.priceRUB(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10));
-                ViewModel.priceUSD( parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10),10));
+                ViewModel.priceUSD( parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10),10)+" $");
             }
         }
     });

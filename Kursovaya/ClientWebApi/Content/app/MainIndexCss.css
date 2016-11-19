@@ -2,18 +2,23 @@
     height: 90vh;
     font-family: Helvetica Narrow, sans-serif;
     font-style: italic;
-    margin: 10px;
+    text-align: center;
 }
 
 .flex-container {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+label {
+    width: 200px;
 }
 
 a {
     cursor: pointer;
     margin-top: 10px;
-    float: left;
-    width: 100%;
+    text-align: center;
 }
 
 img {
