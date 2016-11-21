@@ -78,8 +78,8 @@ $(function () {
     $('.spinner .btn:first-of-type').on('click', function () {
         if (IdProd !== "0") {
             $('.spinner input').val(parseInt($('.spinner input').val(), 10) + 1);
-            ViewModel.priceRUB(Number($('.spinner input').val(), 10)*Number(Price.toString(), 10));
-            ViewModel.priceUSD(parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10),10)+" руб");
+            ViewModel.priceRUB(Number($('.spinner input').val(), 10) * Number(Price.toString(), 10) + " руб");
+            ViewModel.priceUSD(parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10), 10) + " $");
         }
     });
 
@@ -87,8 +87,8 @@ $(function () {
         if (IdProd !== "0") {
             if (parseInt($('.spinner input').val(), 10) - 1 > 0) {
                 $('.spinner input').val(parseInt($('.spinner input').val(), 10) - 1);
-                ViewModel.priceRUB(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10));
-                ViewModel.priceUSD( parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10),10)+" $");
+                ViewModel.priceRUB(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) + " руб");
+                ViewModel.priceUSD(parseInt(parseInt($('.spinner input').val(), 10) * parseInt(Price, 10) / parseInt(DollarCurs, 10), 10) + " $");
             }
         }
     });
