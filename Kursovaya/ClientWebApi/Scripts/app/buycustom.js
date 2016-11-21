@@ -1,9 +1,9 @@
 ﻿var ViewModel = {
     ListProducts: ko.observableArray(),
     Name: ko.observable(),
-    f: ko.observable(),
-    i: ko.observable(),
-    o: ko.observable(),
+    f: ko.observable(""),
+    i: ko.observable(""),
+    o: ko.observable(""),
     Price: ko.observable(),
     actioncontroller: ko.observable(),
     MainVid: ko.observable(),
@@ -101,7 +101,7 @@ $(function () {
         if (IdProd !== "0" && $("#spinnercount").val() !== "0") {
             var pur = {
                 Fio: ViewModel.f() + " " + ViewModel.i() + " " + ViewModel.o(),
-                Price: ViewModel.priceRUB(),
+                Price: parseInt(ViewModel.priceRUB()),
                 Counttovar: $("#spinnercount").val(),
                 Date: null,
                 IdProduct: parseInt(IdProd, 10)
