@@ -12,7 +12,8 @@ namespace Admin
         public Auth()
         {
             InitializeComponent();
-            using (BaseContext db = new BaseContext()) {
+            using (BaseContext db = new BaseContext())
+            {
                 abc = db.UsersAdmin.ToList();
             }
         }
@@ -21,7 +22,7 @@ namespace Admin
         {
             if (textBox1.Text != string.Empty || textBox2.Text != string.Empty)
             {
-                if (abc.Where(u => u.Login == textBox1.Text&& u.Password == textBox2.Text).Count()==1)
+                if (abc.Where(u => u.Login == textBox1.Text && u.Password == textBox2.Text).Count() == 1)
                 {
                     Form1 a = new Form1();
                     a.Show();
@@ -35,7 +36,7 @@ namespace Admin
 
             }
             else {
-                MessageBox.Show("Не верный логин или пароль", "Уведомление" );
+                MessageBox.Show("Не верный логин или пароль", "Уведомление");
             }
         }
     }

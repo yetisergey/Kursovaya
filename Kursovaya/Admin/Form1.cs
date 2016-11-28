@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Admin
@@ -24,9 +25,10 @@ namespace Admin
                 }).ToList();
             }
         }
-
+        
         public Form1()
         {
+
             InitializeComponent();
             UpdateGrid();
             selfRef = this;
@@ -77,13 +79,22 @@ namespace Admin
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ProgressForm temp = new ProgressForm();
+            temp.Show();
             HintForm a = new HintForm();
             a.Show();
+            temp.Close();
+        }
 
+
+        private static void Form1_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);
 
         }
     }

@@ -22,3 +22,4 @@ C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\x64\Debug\Adm
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\x64\Debug\Admin.csproj.GenerateResource.Cache
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\x64\Debug\Admin.exe
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\x64\Debug\Admin.pdb
+C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Admin\obj\x64\Debug\Admin.ProgressForm.resources
