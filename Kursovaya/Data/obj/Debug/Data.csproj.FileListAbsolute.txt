@@ -15,6 +15,5 @@ C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\bin\Debug\EntityFr
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\bin\Debug\EntityFramework.xml
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\obj\Debug\Data.exe
 C:\Users\Sergey\Desktop\Курсач\Kursovaya\Kursovaya\Data\obj\Debug\Data.pdb
