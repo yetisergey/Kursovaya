@@ -97,5 +97,10 @@ namespace Admin
             this.FormClosing += new FormClosingEventHandler(Form1_FormClosing);
 
         }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

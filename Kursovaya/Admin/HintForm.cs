@@ -39,10 +39,11 @@ namespace Admin
                         .OrderBy(u => u.Month.Year)
                         .Select(u => u.Count)
                         .ToArray();
+
                     int[] tt1 = new int[reslinq.Count()];
                     for (var it = 0; it < reslinq.Count(); it++)
                     {
-                        tt1[it] = it;
+                        tt1[it] = it+1;
                     }
                     MWArray mas = null;
                     MWNumericArray arr1 = tt1;
